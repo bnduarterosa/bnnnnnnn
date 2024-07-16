@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria de Fotos</title>
+<style>
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    justify-content: space-around; /
+
+
+.img {
+    width: calc(25% - 10px); /* 25% de largura com gap de 10px entre as imagens */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.img:hover {
+    transform: scale(1.05);
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .img {
+        width: calc(33.33% - 10px); /* 33.33% de largura com gap de 10px entre as imagens */
+    }
+}
+
+@media (max-width: 480px) {
+    .img {
+        width: calc(50% - 10px); /* 50% de largura com gap de 10px entre as imagens */
+    }
+}
+</style>
+</head>
+<body>
+ <h1>Galeria</h1>
+<div class="gallery">
+    <div class="img">
+        <img src="BruceLee.webp" alt="Imagem 1">
+    </div>
+    <div class="img">
+        <img src="ney.webp" alt="Imagem 2">
+    </div>
+    <div class="img">
+        <img src="maxresdefault.jpg" alt="Imagem 3">
+    </div>
+    <div class="img">
+        <img src="Webp.webp" alt="Imagem 4">
+    </div>
+</div>
+
+</body>
+</html>
+
